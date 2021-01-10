@@ -68,6 +68,7 @@ export const logout = () => {
                     "Access-Control-Allow-Credentials": true,
                 },
             });
+            console.log(response);
 
             const resData = await response.json();
             if (resData === null || resData === undefined || resData.error) {

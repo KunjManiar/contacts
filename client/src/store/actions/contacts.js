@@ -17,6 +17,7 @@ export const fetchContacts = () => {
                     "Access-Control-Allow-Credentials": true,
                 },
             });
+            console.log(response);
 
 
             const resData = await response.json();
