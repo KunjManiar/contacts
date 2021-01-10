@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback, useLayoutEffect } from 'react'
 import Header from '../components/Header/Header'
 // import FlatList from 'flatlist-react';
 // import ImageIcon from '../components/UI/ImageIcon';
@@ -39,6 +39,8 @@ const getFormatedPhoneNumber = (phoneNumber) => {
 
 const ContactScreen = props => {
     const history = useHistory()
+
+    const [headerTitle, setHeaderTitle] = useState()
 
     const user = useSelector(state => state.auth.user)
     const contacts = useSelector(state => state.contacts.contacts)
@@ -97,6 +99,55 @@ const ContactScreen = props => {
 
     //     // return () => { willFocusSub.remove(); }
     // }, [loadContacts]);
+
+
+    useLayoutEffect(() => {
+        if (window.innerWidth > 600) {
+            setHeaderTitle(
+                <div className="row" style={styles.detailsHeading}>
+                    {/* <div className="col l1 m1 s1">
+                    </div> */}
+                    <div className="col l2 m2 s2">
+                        <p style={{ ...styles.textStyleHeading, ...{ textAlign: 'center' } }}>NAME</p>
+                    </div>
+                    <div className="col l3 m3 s2">
+                    </div>
+                    <div className="col l2 m2 s2">
+                        <p style={styles.textStyleHeading}>EMAIL</p>
+                    </div>
+                    <div className="col l2 m2 s2">
+                    </div>
+                    <div className="col l2 m2 s2">
+                        <p style={{ ...styles.textStyleHeading }}>PHONE NUMBER</p>
+                    </div>
+                    <div className="col l1 m1 s1">
+                    </div>
+                </div>
+            )
+        } else {
+            setHeaderTitle(
+                <div className="row" style={styles.detailsHeading}>
+                    {/* <div className="col l1 m1 s1">
+                    </div> */}
+                    <div className="col l2 m2 s2">
+                        <p style={{ ...styles.textStyleHeading, ...{ textAlign: 'center' } }}>NAME</p>
+                    </div>
+                    {/* <div className="col l3 m3 s2">
+                    </div>
+                    <div className="col l2 m2 s2">
+                        <p style={styles.textStyleHeading}>EMAIL</p>
+                    </div> */}
+                    <div className="col l2 m2 s5">
+                    </div>
+                    <div className="col l2 m2 s2">
+                        <p style={{ ...styles.textStyleHeading }}>PHONE NUMBER</p>
+                    </div>
+                    <div className="col l1 m1 s1">
+                    </div>
+                </div>
+            )
+        }
+    }, [])
 
 
     if (error) {
@@ -176,13 +227,12 @@ const ContactScreen = props => {
                 <div className="row" style={styles.topHeading}>
                     <span style={styles.mainTitle}>Contacts<span style={styles.totalContacts}>({contacts.length})</span></span>
                 </div>
-                <div className="row" style={styles.detailsHeading}>
-                    {/* <div className="col l1 m1 s1">
-                    </div> */}
+                {/* <div className="row" style={styles.detailsHeading}>
+                    
                     <div className="col l2 m2 s2">
                         <p style={{ ...styles.textStyleHeading, ...{ textAlign: 'center' } }}>NAME</p>
                     </div>
-                    <div className="col l3 m2 s2">
+                    <div className="col l3 m3 s2">
                     </div>
                     <div className="col l2 m2 s2">
                         <p style={styles.textStyleHeading}>EMAIL</p>
@@ -194,7 +244,8 @@ const ContactScreen = props => {
                     </div>
                     <div className="col l1 m1 s1">
                     </div>
-                </div>
+                </div> */}
+                {headerTitle}
             </div>
             {/* </div> */}
             <div className="container">

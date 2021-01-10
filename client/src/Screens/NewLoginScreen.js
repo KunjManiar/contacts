@@ -14,7 +14,7 @@ import React, { useState, useEffect } from 'react';
 //CONSTANTS
 // import Colors from '../constants/Colors';/
 
-const FORM_INPUT_UPDATE = 'FORM_INPUT_UPDATE';
+// const FORM_INPUT_UPDATE = 'FORM_INPUT_UPDATE';
 
 // const formReducer = (state, action) => {
 //     if (action.type === FORM_INPUT_UPDATE) {

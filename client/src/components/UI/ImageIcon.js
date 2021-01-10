@@ -7,7 +7,7 @@ const ImageIcon = props => {
                 width={props.width} 
                 src={props.imgLink} 
                 style={{ ...styles.image, ...{ borderColor: props.borderColor, borderWidth: props.borderWidth, }}} 
-                alt="User Image"
+                alt="Icon"
             />
         // </div>
     )

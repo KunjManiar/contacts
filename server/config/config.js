@@ -11,7 +11,7 @@ const config = {
         DATABASE: 'mongodb+srv://Kunj:Zluri@Contacts@cluster0.6b07i.mongodb.net/contacts?retryWrites=true&w=majority',
         GOOGLE_CLIENT_ID: '880916036413-7cakj7fghuhtoupfhns0l321paglaoj6.apps.googleusercontent.com',
         GOOGLE_CLIENT_SECRET: 'TVi-uDcBdyv3-tCH-LOCyEKZ',
-        URI: "http://localhost:5000"
+        URI: "http://localhost:3000"
     }
 }
 

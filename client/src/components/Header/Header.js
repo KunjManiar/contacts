@@ -14,9 +14,9 @@ const Header = props => {
     const history = useHistory();
     return (
         <div className="row" style={{ ...styles.headerContainer }}>
-            <div className="col s4 m3 l5" >
+            <div className="col s9 m7 l5" >
                 <div className="row" style={{ marginBottom: 0 }}>
-                    <div className="col l1 m4 s3" style={styles.image}>
+                    <div className="col l1 m2 s2" style={styles.image}>
                         <ImageIcon
                             width={54}
                             imgLink={props.imgLink}
@@ -24,7 +24,7 @@ const Header = props => {
                             borderWidth={2}
                         />
                     </div>
-                    <div className="col l10 m7 s8">
+                    <div className="col l10 m9 s9">
                         <p style={styles.name}>{props.givenName} {props.familyName}</p>
                         <p style={styles.email}>{props.email}</p>
                     </div>
@@ -32,7 +32,7 @@ const Header = props => {
             </div>
             {/* <div className="col s4 m4 l3">
             </div> */}
-            <div className="col s7 m8 l6">
+            <div className="col s1 m3 l6">
             </div>
             <div className="col s1 m1 l1">
                 {/* <svg
