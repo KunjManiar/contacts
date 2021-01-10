@@ -41,6 +41,7 @@ app.use(session({
     secret: 'SECRET'
 }));
 
+app.use(express.static('client/build'))
 
 
 const port = process.env.PORT || 3001;
@@ -64,7 +65,7 @@ app.get('/auth/google/callback',
         // Successful authentication, redirect success.
         // const user = await User.findByEmail(req.user.emails[0].value)
         // res.json(user);
-        res.redirect('http://localhost:3000/contact')
+        res.redirect(process.env.NODE_ENV === 'production'? '/' : 'http://localhost:3000/contact')
     }
 );
 
@@ -156,3 +157,10 @@ app.get('/api/logout', function (req, res) {
         ok: 200
     })
 });
+
+if(process.env.NODE_ENV === 'production') {
+    const path = require('path')
+    app.get('/*', (req, res) => {
+        res.sendFile(path.resolve(__dirname,'../client', 'build', 'index.html'))
+    })
+}
