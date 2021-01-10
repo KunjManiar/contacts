@@ -21,7 +21,7 @@ export const fetchUser = () => {
                     "Access-Control-Allow-Credentials": true,
                 },
             });
-            // console.log(response)
+            console.log(response)
 
             const resData = await response.json();
             if (resData === null || resData === undefined || resData.error) {
