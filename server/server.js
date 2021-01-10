@@ -65,7 +65,7 @@ app.get('/auth/google/callback',
         // Successful authentication, redirect success.
         // const user = await User.findByEmail(req.user.emails[0].value)
         // res.json(user);
-        res.redirect(process.env.NODE_ENV === 'production'? '/' : 'http://localhost:3000/contact')
+        res.redirect(process.env.NODE_ENV === 'production'? '/contact' : 'http://localhost:3000/contact')
     }
 );
 
