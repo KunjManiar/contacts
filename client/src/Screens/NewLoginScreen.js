@@ -115,9 +115,9 @@ const LoginScreen = props => {
         < div className="valign-wrapper row login-box" style={{ height: '100%', background: '#E5E5E5', margin: 0 }}>
             <div style={{ position: 'fixed', top: 0}}>
                 {/* <img src="/images/vector 1.svg" alt="vector line" style={{ position: 'fixed', height: (window.innerHeight*0.9323), width: (window.innerWidth*0.5105), top: 0 }} /> */}
-                <img src="/images/vector 1.svg" alt="vector line" style={{ position: 'fixed', top: 0 }} />
+                <img src="/images/Vector 1.svg" alt="vector line" style={{ position: 'fixed', top: 0 }} />
                 {/* <img src="/images/vector 2.svg" alt="vector line" style={{ position: 'fixed', height: (window.innerHeight*0.7557), width: (window.innerWidth*0.3024),  bottom: 0, right: 0 }} /> */}
-                <img src="/images/vector 2.svg" alt="vector line" style={{ position: 'fixed', bottom: 0, right: 0 }} />
+                <img src="/images/Vector 2.svg" alt="vector line" style={{ position: 'fixed', bottom: 0, right: 0 }} />
                 <img src="/images/Ellipse 52.svg" alt="ellipse" style={{ position: 'fixed', top: (window.innerHeight*0.28), left: (window.innerWidth*0.08789) }} />
                 <img src="/images/Ellipse 51.svg" alt="ellipse" style={{ position: 'fixed', top: (window.innerHeight*0.827), left: (window.innerWidth*0.0082) }} />
                 <img src="/images/Ellipse 54.svg" alt="ellipse" style={{ position: 'fixed', top: (window.innerHeight*0.7723), left: (window.innerWidth*0.84) }} />
