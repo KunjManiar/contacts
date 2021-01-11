@@ -31,7 +31,7 @@ Before running the project you need to  follow the below steps to get google con
       - http://localhost:(node_port)/auth/google/contacts
     - If hosting on some platform then (for me heroku free tier)
       - https://(heroku_project_name).herokuapp.com/auth/google/contacts
-      - https://(heroku_project_name).com/auth/google/callback
+      - https://(heroku_project_name).herokuapp.com/auth/google/callback
 
 \
 There is a config.js file in server/config folder you need to configure before running the server.
