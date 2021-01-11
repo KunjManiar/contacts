@@ -138,7 +138,7 @@ const ContactScreen = props => {
                     <div className="col l2 m2 s2">
                         <p style={styles.textStyleHeading}>EMAIL</p>
                     </div> */}
-                    <div className="col l2 m2 s5">
+                    <div className="col l2 m2 s3">
                     </div>
                     <div className="col l2 m2 s2">
                         <p style={{ ...styles.textStyleHeading }}>PHONE NUMBER</p>

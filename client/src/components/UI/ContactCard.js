@@ -72,7 +72,7 @@ const ContactCard = props => {
 
         } else {
             setNamePhoto(
-                <div className="col l4 m4 s7" style={{ height: 90 }}>
+                <div className="col l4 m4 s5" style={{ height: 90 }}>
                     {/* <div className="row" style={{ marginBottom: 0 }}>
                         <div className="col l2 m1 s1"></div>
                         <div className="col l2 m3 s3" style={styles.image}>
@@ -97,8 +97,20 @@ const ContactCard = props => {
             //     </div>
             // )
             setPhone2(
-                <div className="col l2 m2 s5">
+                <div className="col l2 m2 s4">
                     <p style={styles.textName}>{props.phoneNumber}</p>
+                </div>
+            )
+            setPhone3(
+                <div className="col l1 m1 s2" 
+                onClick={async () => {
+                    setLoading(false)
+                    await dispatch(contactsActions.deleteContact(props.resourceName))
+                    setLoading(true)
+                }}
+                style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: 90}}
+                >
+                    <i className="far fa-trash-alt" style={{fontSize: 19, color:'#053ED1' }}></i>
                 </div>
             )
 
