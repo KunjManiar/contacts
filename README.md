@@ -48,6 +48,7 @@ To run it on the development server run the following command
 $ npm run dev
 ```
 
+\
 The above command runs two servers concurrently 
   - Node server on port 3001
   - React server on port 3000
