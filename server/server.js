@@ -157,9 +157,10 @@ async (req, res) => {
                 refresh_token: user.refreshToken,
             });
             // let contacts
-            deleteContact.deleteContact(authObj, id, (res) => {
+            deleteContact.deleteContact(authObj, id, (resAns) => {
                 // console.log("In contacts inner function")
                 // console.log(funcRes)
+                console.log(resAns)
                 res.json({
                     // contacts: contactsInner,
                     ok: 200
