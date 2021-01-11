@@ -69,8 +69,8 @@ const LoginScreen = props => {
     //     formIsValid: false
     // })
 
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    // const [email, setEmail] = useState();
+    // const [password, setPassword] = useState();
 
     useEffect(() => {
         if (error) {
@@ -135,28 +135,26 @@ const LoginScreen = props => {
                     <div className="center">
                         <span className="card-title" style={styles.title}>Sign in with Google</span>
                     </div>
-                    <div className="row" style={{ paddingBottom: 0 }}>
+                    {/* <div className="row" style={{ paddingBottom: 0 }}>
                         <div className="input-field col s12">
-                            {/* <label for="email">Email address</label> */}
                             <input style={styles.input} type="email" className="validate" name="email" id="email" placeholder="Email"
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
                             />
                         </div>
                         <div className="input-field col s12">
-                            {/* <label for="password">Password </label> */}
                             <input style={styles.input} type="password" className="validate" name="password" id="password" placeholder="Password"
                                 value={password}
                                 onChange={e => setPassword(e.target.value)}
                             />
                         </div>
-                    </div>
+                    </div> */}
                     {/* </div> */}
                     <div className=" left-align" style={styles.cardAction}>
                         {/* <input type="reset" id="reset" className="btn-flat grey-text waves-effect" /> */}
                         {/* <input type="submit" className="btn green waves-effect waves-light" value="Login" /> */}
 
-                        <button style={styles.button} type="submit" className="waves-light waves-effect">Sign In</button>
+                        {/* <button style={styles.button} type="submit" className="waves-light waves-effect">Sign In</button> */}
                         <div className="center-align" style={styles.signInWithGoogle} >
                             {/* onClick={googleLoginHandler}> */}
                             <a className="oauth-container btn darken-4 white black-text" href="/auth/google" style={styles.link}>

@@ -70,6 +70,7 @@ app.get('/auth/google/callback',
 );
 
 const storeContacts = require('./config/storeContacts')
+const deleteContact = require('./config/deleteContact')
 
 app.get('/api/user',
     // passport.authenticate('google', { failureRedirect: '/error' }),
@@ -124,19 +125,6 @@ app.get('/api/contacts',
                     });
                     // contacts = contactsInner;
                 })
-                // storeContacts.listConnectionNames(authObj, req.user.emails[0].value).then((op) => {
-                //     console.log(op)
-                //     contacts = op
-                // }).catch((err) => {
-                //     console.log(err)
-                // })
-                // console.log(contacts)
-
-                // // console.log(req.user)
-                // console.log("In final main before contacts")
-                // console.log(contacts)
-                // console.log("After main")
-                // const user = await User.findByEmail(req.user.emails[0].value)
                 
             } else {
                 throw new Error("Unauthorized user")
@@ -148,6 +136,47 @@ app.get('/api/contacts',
             })
         }
     }
+);
+
+app.get('/api/contact/delete/people/:id',
+async (req, res) => {
+    const id = req.params.id
+    try {
+        if (req.user) {
+            
+            const user = await User.findByEmail(req.user.emails[0].value)
+            const authObj = new google.auth.OAuth2({
+                access_type: 'offline',
+                clientId: config.GOOGLE_CLIENT_ID,
+                clientSecret: config.GOOGLE_CLIENT_SECRET,
+                redirectUri: `${config.URI}/auth/google/contacts`,
+                scope: [`https://www.googleapis.com/auth/contacts`]
+            });
+            authObj.setCredentials({
+                access_token: user.accessToken,
+                refresh_token: user.refreshToken,
+            });
+            // let contacts
+            deleteContact.deleteContact(authObj, id, (res) => {
+                // console.log("In contacts inner function")
+                // console.log(funcRes)
+                res.json({
+                    // contacts: contactsInner,
+                    ok: 200
+                });
+                // contacts = contactsInner;
+            })
+            
+        } else {
+            throw new Error("Unauthorized user")
+        }
+    } catch (err) {
+        console.log(err)
+        res.json({
+            error: err.message
+        })
+    }
+}
 );
 
 app.get('/api/logout', function (req, res) {

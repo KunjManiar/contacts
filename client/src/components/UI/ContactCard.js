@@ -2,7 +2,13 @@ import React, { useState, useLayoutEffect } from 'react';
 
 import ImageIcon from './ImageIcon';
 
+
+import * as contactsActions from '../../store/actions/contacts'
+import { useDispatch } from 'react-redux'
+
 const ContactCard = props => {
+
+    const dispatch = useDispatch()
 
     const [namePhoto, setNamePhoto] = useState()
     const [email, setEmail] = useState()
@@ -10,6 +16,8 @@ const ContactCard = props => {
     const [phone, setPhone] = useState()
     const [phone2, setPhone2] = useState()
     const [phone3, setPhone3] = useState()
+
+    const [loading, setLoading] = useState(true)
 
     useLayoutEffect(() => {
         if (window.innerWidth > 600) {
@@ -50,7 +58,15 @@ const ContactCard = props => {
                 </div>
             )
             setPhone3(
-                <div className="col l1">
+                <div className="col l1" 
+                onClick={async () => {
+                    setLoading(false)
+                    await dispatch(contactsActions.deleteContact(props.resourceName))
+                    setLoading(true)
+                }}
+                style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: 62.25}}
+                >
+                    <i className="far fa-trash-alt" style={{fontSize: 19, color:'#053ED1' }}></i>
                 </div>
             )
 
@@ -87,7 +103,7 @@ const ContactCard = props => {
             )
 
         }
-    }, [props.imgLink, props.name, props.email, props.phoneNumber])
+    }, [props.imgLink, props.name, props.email, props.phoneNumber, dispatch, props.resourceName])
 
     return (
         <div className="row" style={styles.card}>
@@ -119,7 +135,7 @@ const ContactCard = props => {
             </div> */}
             {phone}
             {phone2}
-            {phone3}
+            {loading && phone3}
             {/* <div className="col l2 m1 s1">
             </div> */}
             {/* <div className="col l2 m2 s2" style={styles.phoneContainer}>
@@ -168,7 +184,7 @@ const styles = {
         marginTop: 21
     },
     phoneContainer: {
-        marginLeft: 10
+        marginLeft: 0
     },
     textNameSmall: {
         margin: 0,

@@ -121,6 +121,7 @@ const ContactScreen = props => {
                         <p style={{ ...styles.textStyleHeading }}>PHONE NUMBER</p>
                     </div>
                     <div className="col l1 m1 s1">
+                        
                     </div>
                 </div>
             )
@@ -262,7 +263,7 @@ const ContactScreen = props => {
                             email={contact.email}
                             phoneNumber={getFormatedPhoneNumber(contact.phoneNumber)}
                             key={index}
-
+                            resourceName={contact.resourceName}
                         />)
                     )}
                     {/* {getContactCards} */}
