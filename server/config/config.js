@@ -7,10 +7,10 @@ const config = {
         URI: process.env.URI
     },
     default:{
-        SECRET: 'SUPERSECRETPASSWORD123',
-        DATABASE: 'mongodb+srv://Kunj:Zluri@Contacts@cluster0.6b07i.mongodb.net/contacts?retryWrites=true&w=majority',
-        GOOGLE_CLIENT_ID: '880916036413-7cakj7fghuhtoupfhns0l321paglaoj6.apps.googleusercontent.com',
-        GOOGLE_CLIENT_SECRET: 'TVi-uDcBdyv3-tCH-LOCyEKZ',
+        SECRET: '',
+        DATABASE: '',
+        GOOGLE_CLIENT_ID: '',
+        GOOGLE_CLIENT_SECRET: '',
         URI: "http://localhost:3000"
     }
 }
