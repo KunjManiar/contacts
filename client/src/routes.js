@@ -6,7 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 // import Login from './Screens/LoginScreen'
 import NewLogin from './Screens/NewLoginScreen'
 import ContactScreen from './Screens/ContactScreen'
-import ContactScreenTest from './Screens/ContactScreenTest'
+// import ContactScreenTest from './Screens/ContactScreenTest'
 import Loader from './components/UI/Loader'
 // import IframeTestScreen from './Screens/IframeTestScreen'
 // import User from './components/Admin'
@@ -26,7 +26,7 @@ const Routes = () => {
                 {/* <Route path="/" exact component={Login}/> */}
                 <Route path="/" exact component={NewLogin}/>
                 <Route path="/contact" exact component={ContactScreen}/>
-                <Route path="/contactTest" exact component={ContactScreenTest}/>
+                {/* <Route path="/contactTest" exact component={ContactScreenTest}/> */}
                 <Route path="/loading" exact component={Loader}/>
                 {/* <Route path="/contactList" exact component={IframeTestScreen}/> */}
                 {/* <Route path="/home" exact component={Auth(Home,false)}/> */}
