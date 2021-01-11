@@ -43,6 +43,11 @@ Following are the variables you need to add to your default production environme
   - URI (the port on which you are running your node server)
 
 \
+Lastly just add the API_KEY in the following location
+  - client\store\actions\contacts
+  - Line 3: API_KEY="(Your_API_KEY)"
+
+\
 To run it on the development server run the following command
 
 ```sh

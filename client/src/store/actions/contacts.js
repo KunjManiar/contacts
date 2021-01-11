@@ -1,6 +1,9 @@
 import Contact from "../../models/contact";
 
+const API_KEY = "";
+
 export const FETCH_CONTACTS = 'FETCH_CONTACTS';
+
 
 export const fetchContacts = () => {
     return async (dispatch, getState) => {
@@ -32,7 +35,7 @@ export const fetchContacts = () => {
                     contact.resourceName,
                     !!contact.emails[0] ? contact.emails[0] : '',
                     !!contact.phoneNumbers[0] ? contact.phoneNumbers[0] : '',
-                    contact.photoUrl
+                    `${contact.photoUrl}?key=${API_KEY}`
                 ))
             }
             dispatch({

@@ -252,7 +252,7 @@ const ContactScreen = props => {
                 <Scrollbars style={{ height: window.innerHeight - 225 }}>
                     {contacts.map((contact, index) => (
                         <ContactCard
-                            imgLink={`${contact.photoUrl}?key=AIzaSyBC_Hj56Os26QOk7yurrdj3IFKXH7VVqWQ&access_token=${user.accessToken}`}
+                            imgLink={`${contact.photoUrl}&access_token=${user.accessToken}`}
                             name={contact.name}
                             email={contact.email}
                             phoneNumber={getFormatedPhoneNumber(contact.phoneNumber)}
