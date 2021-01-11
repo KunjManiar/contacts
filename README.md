@@ -42,13 +42,13 @@ Following are the variables you need to add to your default production environme
   - GOOGLE_CLIENT_SECRET (Your client secret when you register your project with google)
   - URI (the port on which you are running your node server)
 
+\
 To run it on the development server run the following command
 
 ```sh
 $ npm run dev
 ```
 
-\
 The above command runs two servers concurrently 
   - Node server on port 3001
   - React server on port 3000
