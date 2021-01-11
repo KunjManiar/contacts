@@ -1,6 +1,6 @@
 import Contact from "../../models/contact";
 
-const API_KEY = "AIzaSyBC_Hj56Os26QOk7yurrdj3IFKXH7VVqWQ";
+const API_KEY = "";
 
 export const FETCH_CONTACTS = 'FETCH_CONTACTS';
 
