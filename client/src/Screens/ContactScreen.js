@@ -216,6 +216,11 @@ const ContactScreen = props => {
 
     return (
         <div style={styles.mainContainer}>
+            {/* <img src="/images/Ellipse 51.svg" alt="ellipse" style={{ position: 'fixed', top: (window.innerHeight*0.827), left: (window.innerWidth*0.0082) }} /> */}
+            <div style={{ position: 'fixed' }}>
+                <img src="/images/Ellipse 49.svg" alt="ellipse" style={{position: 'fixed', zIndex: -1, opacity: '60%', left: 0}} />
+                <img src="/images/Ellipse 50.svg" alt="ellipse" style={{position: 'fixed', zIndex: -1, opacity: '60%', right: 0}}/>
+            </div>
             {/* <div className={`sticky-wrapper${isSticky ? ' sticky' : ''}`} ref={ref}> */}
             <Header
                 imgLink={user.photo}

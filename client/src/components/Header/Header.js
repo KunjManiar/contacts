@@ -14,7 +14,7 @@ const Header = props => {
     const history = useHistory();
     return (
         <div className="row" style={{ ...styles.headerContainer }}>
-            <div className="col s9 m7 l5" >
+            <div className="col s9 m7 l5" style={{position: 'relative'}}>
                 <div className="row" style={{ marginBottom: 0 }}>
                     <div className="col l1 m2 s2" style={styles.image}>
                         <ImageIcon
@@ -46,10 +46,12 @@ const Header = props => {
                     <path  viewBox="0 0 38 38" d="M2.598 9h-1.055c1.482-4.638 5.83-8 10.957-8 6.347 0 11.5 5.153 11.5 11.5s-5.153 11.5-11.5 11.5c-5.127 0-9.475-3.362-10.957-8h1.055c1.443 4.076 5.334 7 9.902 7 5.795 0 10.5-4.705 10.5-10.5s-4.705-10.5-10.5-10.5c-4.568 0-8.459 2.923-9.902 7zm12.228 3l-4.604-3.747.666-.753 6.112 5-6.101 5-.679-.737 4.608-3.763h-14.828v-1h14.826z" />
                 </svg> */}
                 {/* <img style={styles.logout} src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yLjU5OCA5aC0xLjA1NWMxLjQ4Mi00LjYzOCA1LjgzLTggMTAuOTU3LTggNi4zNDcgMCAxMS41IDUuMTUzIDExLjUgMTEuNXMtNS4xNTMgMTEuNS0xMS41IDExLjVjLTUuMTI3IDAtOS40NzUtMy4zNjItMTAuOTU3LThoMS4wNTVjMS40NDMgNC4wNzYgNS4zMzQgNyA5LjkwMiA3IDUuNzk1IDAgMTAuNS00LjcwNSAxMC41LTEwLjVzLTQuNzA1LTEwLjUtMTAuNS0xMC41Yy00LjU2OCAwLTguNDU5IDIuOTIzLTkuOTAyIDd6bTEyLjIyOCAzbC00LjYwNC0zLjc0Ny42NjYtLjc1MyA2LjExMiA1LTYuMTAxIDUtLjY3OS0uNzM3IDQuNjA4LTMuNzYzaC0xNC44Mjh2LTFoMTQuODI2eiIvPjwvc3ZnPg=="></img> */}
-                <div 
+                <div
+                    style={{position: 'relative'}} 
                     onClick={async() => {
                     await dispatch(authActions.logout())
                     history.push('/')
+                    
                 }}>
                     <i className="fas fa-sign-out-alt" style={styles.logout}></i>
                 </div>
@@ -71,7 +73,9 @@ const styles = {
         paddingTop: 12,
         paddingLeft: 0,
         paddingRight: 0,
-        marginRight: 8
+        marginRight: 8,
+        zIndex: 1,
+        positon: 'relative',
     },
     name: {
         fontFamily: 'Poppins',
@@ -80,7 +84,9 @@ const styles = {
         color: '#FFFFFF',
         letterSpacing: '0.06em',
         marginTop: 16,
+        zIndex: 1,
         marginBottom: 1,
+        positon: 'relative',
     },
     email: {
         fontFamily: 'Poppins',
@@ -89,7 +95,9 @@ const styles = {
         color: '#FFFFFF',
         letterSpacing: '0.06em',
         marginTop: 1,
+        zIndex: 1,
         marginBottom: 15,
+        positon: 'relative',
     },
     logout: {
         fontSize: 24,

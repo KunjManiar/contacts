@@ -111,7 +111,20 @@ const LoginScreen = props => {
     // }
 
     return (
+
         < div className="valign-wrapper row login-box" style={{ height: '100%', background: '#E5E5E5', margin: 0 }}>
+            <div style={{ position: 'fixed', top: 0}}>
+                {/* <img src="/images/vector 1.svg" alt="vector line" style={{ position: 'fixed', height: (window.innerHeight*0.9323), width: (window.innerWidth*0.5105), top: 0 }} /> */}
+                <img src="/images/vector 1.svg" alt="vector line" style={{ position: 'fixed', top: 0 }} />
+                {/* <img src="/images/vector 2.svg" alt="vector line" style={{ position: 'fixed', height: (window.innerHeight*0.7557), width: (window.innerWidth*0.3024),  bottom: 0, right: 0 }} /> */}
+                <img src="/images/vector 2.svg" alt="vector line" style={{ position: 'fixed', bottom: 0, right: 0 }} />
+                <img src="/images/Ellipse 52.svg" alt="ellipse" style={{ position: 'fixed', top: (window.innerHeight*0.28), left: (window.innerWidth*0.08789) }} />
+                <img src="/images/Ellipse 51.svg" alt="ellipse" style={{ position: 'fixed', top: (window.innerHeight*0.827), left: (window.innerWidth*0.0082) }} />
+                <img src="/images/Ellipse 54.svg" alt="ellipse" style={{ position: 'fixed', top: (window.innerHeight*0.7723), left: (window.innerWidth*0.84) }} />
+                <img src="/images/Ellipse 55.svg" alt="ellipse" style={{ position: 'fixed', top: (window.innerHeight*0.3423), left: (window.innerWidth*0.87) }} />
+                <img src="/images/Ellipse 53.svg" alt="ellipse" style={{ position: 'fixed', top: (window.innerHeight*0.9108), left: (window.innerWidth*0.9618) }} />
+                <img src="/images/Ellipse 56.svg" alt="ellipse" style={{ position: 'fixed', top: (window.innerHeight*0.1925), left: (window.innerWidth*0.9723) }} />
+            </div>
             <div className="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4" style={styles.card}>
                 {/* <Card style={styles.authContainer}> */}
                 <div className="card-content">
@@ -125,14 +138,14 @@ const LoginScreen = props => {
                     <div className="row" style={{ paddingBottom: 0 }}>
                         <div className="input-field col s12">
                             {/* <label for="email">Email address</label> */}
-                            <input style={styles.input} type="email" className="validate" name="email" id="email" placeholder="Email" 
+                            <input style={styles.input} type="email" className="validate" name="email" id="email" placeholder="Email"
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
                             />
                         </div>
                         <div className="input-field col s12">
                             {/* <label for="password">Password </label> */}
-                            <input style={styles.input} type="password" className="validate" name="password" id="password" placeholder="Password" 
+                            <input style={styles.input} type="password" className="validate" name="password" id="password" placeholder="Password"
                                 value={password}
                                 onChange={e => setPassword(e.target.value)}
                             />
@@ -151,7 +164,7 @@ const LoginScreen = props => {
                                     <img width="20px" style={{ marginTop: '8px', marginRight: '8px' }} alt="Google sign-in"
                                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
                                 </div>
-                                <p style={{fontSize: 18, textAlign: 'center', fontWeight: 500}}>Login with Google</p>
+                                <p style={{ fontSize: 18, textAlign: 'center', fontWeight: 500 }}>Login with Google</p>
                             </a>
                         </div>
 

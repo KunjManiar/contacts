@@ -87,7 +87,7 @@ const ContactCard = props => {
             )
 
         }
-    }, [props.imgLink, props.name])
+    }, [props.imgLink, props.name, props.email, props.phoneNumber])
 
     return (
         <div className="row" style={styles.card}>
